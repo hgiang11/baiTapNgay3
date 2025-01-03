@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>kiểm tra số chia hết cho 5</h1>
+    <input type=" number" name = "nhập số" id = "nhapso"  > 
+    <button onclick = "ok()"> ok </button>
+    <p id = "result"></p>
+    <script>
+        function ok( ) {
+            let i = document.getElementById("nhapso").value;
+            if(i % 5 == 0) {
+                document.getElementById("result").innerHTML = "Số " + i + " chia hết cho 5";
+            } else {
+                document.getElementById("result").innerHTML = "Số " + i + " không chia hết cho 5";
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
