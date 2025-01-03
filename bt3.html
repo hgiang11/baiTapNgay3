@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>xếp hạng sinh viên</h1>
+    <input type="number" id="inputNumber1" placeholder="nhap vao so diem toan">
+    <input type="number" id="inputNumber2" placeholder="nhap vao so diem ly">
+    <input type="number" id="inputNumber3" placeholder="nhap vao so diem hoa">
+    <button onclick="sort()">Xếp hạng</button>
+    <p id="result"></p>
+    <script>
+        
+
+        function sort() {
+            let number1 = +document.getElementById("inputNumber1").value;
+            let number2 = +document.getElementById("inputNumber2").value;
+            let number3 = +document.getElementById("inputNumber3").value;
+            let tb = (number1 + number2 + number3) / 3;
+            if (tb < 5) {
+                document.getElementById("result").innerHTML = "Sinh viên đạt kết quả yếu";
+            } else if (tb >= 5 && tb < 6.5) {
+                document.getElementById("result").innerHTML = "sinh viên đạt kết quả trung bình"
+            } else if (tb > 6.5 && tb < 8) {
+                document.getElementById("result").innerHTML = "sinh viên đạt kết quả khá"
+            } else if (tb >= 8) {
+                document.getElementById("result").innerHTML = "sinh viên đạt kết quả giỏỏi"
+            }
+        }
+    </script>
+</body>
+</ht
