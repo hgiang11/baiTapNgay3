@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>tính tiền điện</h1>
+    <input type = "number" id = "inputNumber" placeholder = "nhap so tien dien">
+    <button onclick="calculateElectricity()">Tính tiền</button>
+    <p id = "result"></p>
+    <script>
+        function calculateElectricity(){
+            let number = document.getElementById ("inputNumber").value;
+            if(number>200){
+                result = 2000* number;
+            } else if ( number >50 && number <150) {
+                result = 12200* number;
+            } else if ( number <50){
+                result = 9000* number;
+            }
+            document.getElementById("result").innerHTML = "Tien dien phai tra la: " + result + " VND";
+        }
+    </script>
+</body>
+</html>
